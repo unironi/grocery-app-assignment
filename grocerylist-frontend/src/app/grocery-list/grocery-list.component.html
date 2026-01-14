@@ -5,7 +5,7 @@
         <input type="checkbox" [(ngModel)]="item.purchased"/>
         <h2 class="text-3xl font-bold underline">{{ item.name }}</h2>
         <button (click)="startEdit(item)">Edit</button>
-        <button (click)="deleteItem(item.id)">Delete</button>
+        <button class="delete" (click)="deleteItem(item.id)">Delete</button>
         <span></span>
         <p>${{ item.price }} × {{ item.quantity }}</p>
     </div>

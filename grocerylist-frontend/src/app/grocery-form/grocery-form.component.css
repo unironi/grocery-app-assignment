@@ -20,51 +20,22 @@ div.form-fields > div {
     width: 100%;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  background-color: rgb(196, 225, 236);
-  padding: 1rem;
-  border-radius: 10px;
-  width: 100%;
-}
-
-.form-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-} */
-
 
 @media screen and (min-width: 600px) {
     form,
-    div.form-fields,
+    div.form-fields {
+        display: flex;
+        flex-direction: row;
+        gap:1.5em;
+    }
+
     div.form-fields > div {
-        display: flex;
-        flex-direction: row;
-        gap:3.5em;
-        width:fit-content;
-        height: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
 
-    /* form, .form-fields {
-        flex-direction: row;
-        gap: 3em;
-        align-items: stretch; 
+    button {
+      padding: 1em;
     }
-
-    .form-fields > div {
-        display: flex;
-        flex-direction: row;
-        flex: 1;              
-        min-width: 0;         
-     }
-
-     button {
-    align-self: flex-start;
-    width: auto;
-  } */
-
-
 }
