@@ -1,0 +1,11 @@
+
+ div.total-cost {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 230, 161);
+    gap:1em;
+    margin: 1em;
+    border-radius: 8px;
+} 

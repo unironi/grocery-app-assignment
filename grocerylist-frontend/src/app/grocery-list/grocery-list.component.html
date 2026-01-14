@@ -1,0 +1,23 @@
+<ul>
+  <li *ngFor="let item of items$ | async">
+    <!-- display mode -->
+    <div *ngIf="!item.editing">
+        <input type="checkbox" [(ngModel)]="item.purchased"/>
+        <h2 class="text-3xl font-bold underline">{{ item.name }}</h2>
+        <button (click)="startEdit(item)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+        <span></span>
+        <p>${{ item.price }} × {{ item.quantity }}</p>
+    </div>
+
+    <!-- editing mode -->
+    <div class="edit-mode" *ngIf="item.editing">
+        <input [(ngModel)]="item.name" />
+        <input type="number" [(ngModel)]="item.price" step="0.01" min="0"/>
+        <input type="number" [(ngModel)]="item.quantity" step="1" min="1"/>
+        <button (click)="saveItem(item)">Save</button>
+        <button (click)="cancelEdit(item)">Cancel</button>
+        <!--cancel item is not supposed to let it save if a user hits it-->
+    </div>
+  </li>
+</ul>

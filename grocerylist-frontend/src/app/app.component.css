@@ -1,0 +1,28 @@
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header auto, middle fills available space, footer auto */
+    height: 100vh; /* full viewport so middle can scroll */
+    padding: 0.5em;
+    box-sizing: border-box;
+    gap: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* make the list area scroll when it overflows */
+.list {
+    overflow: auto;
+    /* ensure the bottom of the list remains visible above the fixed footer */
+    padding-bottom: 5.5rem; /* match footer height + spacing */
+}
+
+/* footer host fixed at bottom (kept small) */
+app-total-cost {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+}
+
