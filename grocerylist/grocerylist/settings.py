@@ -26,7 +26,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") # staticfiles needed for dpe
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['3.98.54.96', 'localhost', '127.0.0.1']
 
