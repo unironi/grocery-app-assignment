@@ -12,22 +12,18 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Source - https://stackoverflow.com/a
-# Posted by dhana, modified by community. See post 'Timeline' for change history
-# Retrieved 2026-01-14, License - CC BY-SA 3.0
-
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") # staticfiles needed for dpeloyment into EC2
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
