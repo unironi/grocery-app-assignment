@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-o+y!@6f1thk4ot_$-*uel4$0%%7*)snd4z#+)#(np)3&h4w-)j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.98.54.96', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['3.98.54.96', 'localhost', '127.0.0.1', 'http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com']
 
 
 # Application definition

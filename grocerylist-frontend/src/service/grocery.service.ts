@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { Item } from './item.model';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class GroceryService {
   private itemsSubject = new BehaviorSubject<Item[]>([]);
   items$ = this.itemsSubject.asObservable();
 
-  private apiUrl = 'http://127.0.0.1:8000/items/';
+  private apiUrl = `${environment.apiUrl}/items/`;
 
   constructor(private http: HttpClient) {}
 
