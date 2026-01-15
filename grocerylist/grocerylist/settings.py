@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-o+y!@6f1thk4ot_$-*uel4$0%%7*)snd4z#+)#(np)3&h4w-)j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.98.54.96', 'localhost', '127.0.0.1', 'http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com']
+ALLOWED_HOSTS = ['3.98.54.96', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -62,11 +62,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:4200" 
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com/" 
+]
 
-CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'grocerylist.urls'
 
