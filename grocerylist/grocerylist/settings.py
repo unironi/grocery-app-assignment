@@ -20,16 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Posted by dhana, modified by community. See post 'Timeline' for change history
 # Retrieved 2026-01-14, License - CC BY-SA 3.0
 
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") # staticfiles needed for dpeloyment into EC2
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o+y!@6f1thk4ot_$-*uel4$0%%7*)snd4z#+)#(np)3&h4w-)j'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
