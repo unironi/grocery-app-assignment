@@ -41,6 +41,7 @@ export class GroceryListComponent implements OnInit {
     item.editing = true;
     item._backup = { ...item };
   }
+  
   cancelEdit(item: Item) {
     Object.assign(item, item._backup);
     item.editing = false;

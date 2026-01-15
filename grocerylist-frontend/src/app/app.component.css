@@ -14,11 +14,9 @@ h2 {
 /* make the list area scroll when it overflows */
 .list {
     overflow: auto;
-    /* ensure the bottom of the list remains visible above the fixed footer */
-    padding-bottom: 5.5rem; /* match footer height + spacing */
+    padding-bottom: 5.5rem;
 }
 
-/* footer host fixed at bottom (kept small) */
 app-total-cost {
     position: fixed;
     bottom: 0;
