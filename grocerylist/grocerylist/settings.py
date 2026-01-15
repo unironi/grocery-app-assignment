@@ -63,7 +63,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com/" 
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com",
 ]
 
 #CORS_ALLOW_ALL_ORIGINS = True
