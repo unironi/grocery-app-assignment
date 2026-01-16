@@ -37,11 +37,13 @@ export class GroceryListComponent implements OnInit {
     })
   }
 
+  // for when user starts editing an item but hits cancel, 
+  // so changes should not be saved and should be restored to the previous version
   startEdit(item: Item) {
     item.editing = true;
     item._backup = { ...item };
   }
-  
+
   cancelEdit(item: Item) {
     Object.assign(item, item._backup);
     item.editing = false;

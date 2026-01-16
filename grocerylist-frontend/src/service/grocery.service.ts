@@ -7,6 +7,12 @@ import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
+
+/* initially used Observable instead of BehaviorSubject 
+but this led to components relying on their own copy of items,
+resulting in components not responding to each other's changes
+in real-time (required web reload to see them) */
+
 export class GroceryService {
 
   private itemsSubject = new BehaviorSubject<Item[]>([]);
