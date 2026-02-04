@@ -20,6 +20,14 @@ export class GroceryService {
 
   private apiUrl = `${environment.apiUrl}/items/`;
 
+  private boundaryCheck(item: Item) {
+    return item = {
+      ...item,
+      price: Math.max(0, item.price),
+      quantity: Math.max(1, item.quantity)
+    }
+  }
+
   constructor(private http: HttpClient) {}
 
   getItems(): void {
@@ -33,6 +41,8 @@ export class GroceryService {
   // }
 
   addItem(item: Item) {
+    item = this.boundaryCheck(item);
+
     return this.http.post<Item>(this.apiUrl, item).pipe(
       tap(created => {
         this.itemsSubject.next([
@@ -48,6 +58,8 @@ export class GroceryService {
   // }
 
   updateItem(id: number, item: Item) {
+    item = this.boundaryCheck(item);
+    
     return this.http.put<Item>(`${this.apiUrl}${id}/`, item).pipe(
       tap(updated => {
         this.itemsSubject.next(
