@@ -23,7 +23,7 @@ After exposing the service as a BehaviorSubject, all sub-components instead refe
 ## Improvements
 
 - Handle duplicate items
-- Collapsable form
+- Collapsible form
 - Grid layout for items on desktop view
 - Bigger improvements:
   - Support multiple grocery lists with date recorded (almost like a note-taking app)
