@@ -20,4 +20,13 @@ After exposing the service as a BehaviorSubject, all sub-components instead refe
 
 <img width="641" height="548" alt="image" src="https://github.com/user-attachments/assets/61f8475c-0bdd-4d65-bc7e-5fc00792bf68" />
 
+## Improvements
 
+- Handle duplicate items
+- Collapsable form
+- Grid layout for items on desktop view
+- Bigger improvements:
+  - Support multiple grocery lists with date recorded (almost like a note-taking app)
+    - Motivations: user may have multiple stores to visit and wants to keep lists separated based on store; user may have different contexts (e.g. a facilities manager may need separate lists for food for home vs food for an office kitchen); keeping note of items for the future
+  - Multiple households instead of just one
+  - Grocery list collaboration
