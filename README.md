@@ -1,6 +1,7 @@
 # grocery-app-assignment
 
-Link to live site: http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com
+No more link, my AWS free tier ended
+~~Link to live site: http://rideco-grocery-app-frontend.s3-website.ca-central-1.amazonaws.com~~
 
 Tech Stack:
 - Angular, HTML, CSS, AWS S3 bucket for frontend
